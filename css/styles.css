@@ -76,6 +76,8 @@ img {
   --gap-column: 24px;
   --column: 3;
   --indent-sections: 120px;
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -129,8 +131,6 @@ body {
 .address-item:focus {
   color: var(--pressed-state-color);
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   /* устанавливем цвет фона ссылок навигации и адреса при наведении Tab и мышкой*/
 }
 
@@ -309,6 +309,13 @@ body {
 
 .link {
   display: block;
+}
+
+.link,
+.button,
+.modal-btn {
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .nav .link,
