@@ -17,20 +17,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
   <!-- підключаєм сторонній нормалізатор стилів для браузера -->
 
-  <link rel=" link stylesheet" href="./css/styles.css" />
+  <link rel="link stylesheet" href="./css/styles.css" />
+
+  <link rel="link modal.js." href="./modal.js." />
+
 </head>
 
 <body>
   <!-- Top Line -->
-  <header class="page-haeder">
+  <header class="page-header" data-header>
     <div class=" header container">
       <nav class="nav">
         <a class="logo link" href="./index.html">web<span class="logo-second">studio</span></a>
 
         <ul class="menu">
-          <li><a class="nav-list link" href="./index.html">Studio</a></li>
-          <li><a class="nav-list link" href="./portfolio.html">Portfolio</a></li>
-          <li><a class="nav-list link" href="">Contacts</a></li>
+          <li><a class="nav-link link current" href="./index.html">Studio</a></li>
+          <li><a class="nav-link link" href="./portfolio.html">Portfolio</a></li>
+          <li><a class="nav-link link" href="">Contacts</a></li>
         </ul>
       </nav>
       <address class="address">
@@ -55,6 +58,7 @@
           <button class="hero-button button" type="button">
             Order Service
           </button>
+
         </div>
       </section>
 
@@ -398,6 +402,8 @@
       </section>
 
     </div>
+
+
   </main>
 
   <footer class="page-footer">
@@ -452,6 +458,24 @@
     </div>
 
   </footer>
+
+  <!-- MOADAL WINDOW -->
+  <div class="backdrop">
+    <div class="modal">
+      <button class="modal-btn" type="button">
+        <svg class="modal-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+
+
+  <script src="./js/header.js"></script>
+
+  <script src="./js/modal.js."></script>
+
 </body>
 
 </html>
