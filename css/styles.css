@@ -687,7 +687,7 @@ body {
   visibility: hidden;
   pointer-events: none;
 
-  transition-delay: 250ms;
+  transition-delay: var(--transition-duration);
 }
 
 .modal {
@@ -771,6 +771,8 @@ body {
   padding-right: 32px;
   padding-left: 32px;
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
   background-color: var(--primary-brand-color);
 }
@@ -778,4 +780,5 @@ body {
 .finger-item:hover .product-overlay,
 .finger-item:focus .product-overlay {
   animation: overlay 1000ms ease-out 500ms 1 alternate both;
+  visibility: visible;
 }
