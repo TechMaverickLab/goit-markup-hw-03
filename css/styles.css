@@ -78,6 +78,8 @@ img {
   --indent-sections: 120px;
   --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --trns-fast: 400ms ease-in;
+  --trns-slow: 800ms ease-in-out;
 }
 
 .visually-hidden {
@@ -94,6 +96,9 @@ img {
 }
 /* ============================================================================================================= */
 /* TEXT */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--hero-text);
@@ -186,8 +191,6 @@ body {
 .hero-button:focus {
   background: var(--pressed-state-color);
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   /* устанавливем цвет фона кнопки при наведении Tab и при нажатии мышкой */
 }
 
@@ -238,9 +241,6 @@ body {
 .filters-list:focus {
   color: var(--hero-text);
   background: var(--pressed-state-color);
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   /* устанавливем цвет фона ссылок навигации и адреса при наведении Tab и мышкой*/
 }
 
@@ -249,6 +249,10 @@ body {
   line-height: 1.5;
   color: var(--text-color);
   /* устанавливаем цвет и пареметры шрифта в тексте параграфов*/
+}
+
+.product .text {
+  color: var(--light-color);
 }
 
 .page-footer .text {
@@ -327,7 +331,7 @@ body {
 
 .nav-link.current::after {
   content: '';
-  /* position: absolute; */
+  position: absolute;
   bottom: 0;
 
   display: block;
@@ -408,9 +412,6 @@ body {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--success-color);
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -438,7 +439,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* position: relative; */
 }
 
 .hero-headline {
@@ -549,9 +549,6 @@ body {
 .worker-link:hover,
 .worker-link:focus {
   background-color: var(--pressed-state-color);
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* SECTION 4 */
@@ -587,9 +584,6 @@ body {
 .customer-link:focus {
   fill: var(--pressed-state-color);
   border: 1px solid var(--pressed-state-color);
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-icon {
@@ -633,9 +627,6 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border: none;
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /**
   |============================
@@ -672,9 +663,6 @@ body {
   border: 1px solid var(--light-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -690,12 +678,24 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+
+  transition: opacity var(--trns-fast), visibility var(--trns-fast);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition-delay: 250ms;
 }
 
 .modal {
   position: absolute;
-  top: calc(50% - 288px);
-  left: calc(50% - 204px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   width: 408px;
   min-height: 576px;
   background: #fcfcfc;
@@ -703,6 +703,15 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   overflow: auto;
+
+  transition: transform 150ms, opacity 150ms;
+  transition-delay: 400ms;
+}
+
+.backdrop.is-hidden.modal {
+  transform: translate(-50%, -70%);
+  opacity: 0;
+  transition-delay: 0;
 }
 
 /* 
@@ -729,7 +738,44 @@ body {
 .modal-btn:focus {
   background: var(--pressed-state-color);
   fill: #fff;
+}
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+/* OVERLAY */
+
+@keyframes overlay {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.product {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-right: 32px;
+  padding-left: 32px;
+  opacity: 0;
+
+  background-color: var(--primary-brand-color);
+}
+
+.finger-item:hover .product-overlay,
+.finger-item:focus .product-overlay {
+  animation: overlay 1000ms ease-out 500ms 1 alternate both;
 }
