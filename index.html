@@ -55,7 +55,7 @@
       <section class="page-hero hero">
         <div class="container">
           <h1 class="hero-headline">Effective Solutions for Your Business</h1>
-          <button class="hero-button button" type="button">
+          <button class="hero-button button" type="button" data-modal-open>
             Order Service
           </button>
 
@@ -173,7 +173,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Twitter link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-twitter"></use>
@@ -181,7 +181,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Facebook link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-facebook"></use>
@@ -189,7 +189,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Linkedin link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-linkedin"></use>
@@ -212,7 +212,7 @@
                 <p class="text">Frontend Developer</p>
 
                 <ul class="social-list">
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Instagram link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-instagram"></use>
@@ -220,7 +220,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Twitter link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-twitter"></use>
@@ -228,7 +228,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Facebook link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-facebook"></use>
@@ -236,7 +236,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Linkedin link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-linkedin"></use>
@@ -256,7 +256,7 @@
                 <p class="text">Marketing</p>
 
                 <ul class="social-list">
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Instagram link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-instagram"></use>
@@ -264,7 +264,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Twitter link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-twitter"></use>
@@ -272,7 +272,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Facebook link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-facebook"></use>
@@ -280,7 +280,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Linkedin link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-linkedin"></use>
@@ -300,7 +300,7 @@
                 <p class="text">UI Designer</p>
 
                 <ul class="social-list">
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Instagram link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-instagram"></use>
@@ -308,7 +308,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Twitter link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-twitter"></use>
@@ -316,7 +316,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Facebook link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-facebook"></use>
@@ -324,7 +324,7 @@
                     </a>
                   </li>
 
-                  <li class="social-cell" class="social-cell">
+                  <li class="social-cell">
                     <a class="worker-link link" href aria-label=" Linkedin link">
                       <svg class="social-icon" width="24" height="24">
                         <use href="./images/icons.svg#icon-linkedin"></use>
@@ -455,14 +455,13 @@
 
 
     </div>
-    </div>
 
   </footer>
 
   <!-- MOADAL WINDOW -->
-  <div class="backdrop">
+  <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button class="modal-btn" type="button">
+      <button class="modal-btn" type="button" data-modal-close>
         <svg class="modal-icon" width="8" height="8">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
