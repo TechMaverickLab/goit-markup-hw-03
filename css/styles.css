@@ -318,7 +318,7 @@ body {
 .link,
 .button,
 .modal-btn {
-  transition-property: color;
+  transition-property: background-color, color, border, fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
