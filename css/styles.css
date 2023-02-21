@@ -789,6 +789,6 @@ body {
 
 .finger-item:hover .product-overlay,
 .finger-item:focus .product-overlay {
-  animation: overlay 1000ms ease-out 500ms 1 alternate both;
+  animation: overlay 700ms ease-out 250ms 1 alternate both;
   visibility: visible;
 }
