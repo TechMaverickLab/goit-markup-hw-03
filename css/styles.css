@@ -666,7 +666,7 @@ body {
 }
 
 .portfolio-list:hover {
-  border: 1px solid var(--light-color);
+  /* border: 1px solid var(--light-color); */
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -757,9 +757,9 @@ body {
     transform: translateY(100%);
     opacity: 0;
   }
-  50% {
+  /* 50% {
     opacity: 0;
-  }
+  } */
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -771,9 +771,9 @@ body {
     transform: translateY(0);
     opacity: 0;
   }
-  50% {
+  /* 50% {
     opacity: 1;
-  }
+  } */
   100% {
     transform: translateY(100%);
     opacity: 1;
@@ -802,16 +802,22 @@ body {
 }
 
 .portfolio-list:hover .product-overlay {
-  animation: overlay 1000ms ease-out 250ms 1 normal both;
+  animation: overlay 1000ms ease-out both;
   visibility: visible;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-list:not(:hover) .product-overlay {
-  animation: overlay-reverse 1000ms ease-out 50ms 1 normal both;
+  animation: overlay-reverse 1000ms ease-out both;
   visibility: visible;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-list:focus .product-overlay {
-  animation: overlay 1000ms ease-out 250ms 1 normal both;
+  animation: overlay 1000ms ease-out both;
   visibility: visible;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
