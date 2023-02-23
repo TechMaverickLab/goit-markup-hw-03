@@ -766,6 +766,20 @@ body {
   }
 }
 
+@keyframes overlay-reverse {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
 .product {
   position: relative;
   overflow: hidden;
@@ -787,8 +801,17 @@ body {
   background-color: var(--primary-brand-color);
 }
 
-.finger-item:hover .product-overlay,
-.finger-item:focus .product-overlay {
-  animation: overlay 600ms ease-out 250ms 1 alternate both;
+.portfolio-list:hover .product-overlay {
+  animation: overlay 1000ms ease-out 250ms 1 normal both;
+  visibility: visible;
+}
+
+.portfolio-list:not(:hover) .product-overlay {
+  animation: overlay-reverse 1000ms ease-out 50ms 1 normal both;
+  visibility: visible;
+}
+
+.portfolio-list:focus .product-overlay {
+  animation: overlay 1000ms ease-out 250ms 1 normal both;
   visibility: visible;
 }
