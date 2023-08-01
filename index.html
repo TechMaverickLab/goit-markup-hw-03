@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,8 +9,8 @@
 
   <title>webstudio</title>
 
-  <link rel=" link preconnect" href="https://fonts.googleapis.com" />
-  <link rel=" link preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
@@ -17,9 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
   <!-- підключаєм сторонній нормалізатор стилів для браузера -->
 
-  <link rel="link stylesheet" href="./css/styles.css" />
-
-  <link rel="link modal.js." href="./modal.js." />
+  <link rel="stylesheet" href="./css/styles.css" />
 
 
 </head>
@@ -34,7 +33,7 @@
         <ul class="menu">
           <li><a class="nav-link link current" href="./index.html">Studio</a></li>
           <li><a class="nav-link link" href="./portfolio.html">Portfolio</a></li>
-          <li><a class="nav-link link" href="">Contacts</a></li>
+          <li><a class="nav-link link" href="#">Contacts</a></li>
         </ul>
       </nav>
       <address class="address">
@@ -202,6 +201,8 @@
 
               </div>
 
+
+
             </li>
             <li class="worker-item">
               <img src="./images/our_team/tom_ford.jpeg" alt="foto Tom Ford" width="264" height="260"
@@ -354,6 +355,7 @@
               </a>
             </li>
 
+
             <li>
               <a class="customer-link link" href aria-label="Klient 2">
                 <svg class="customer-icon" width="104" height="56">
@@ -400,7 +402,6 @@
       </section>
 
     </div>
-
 
   </main>
 
@@ -451,24 +452,28 @@
         </ul>
       </div>
 
-
     </div>
 
   </footer>
 
   <!-- MOADAL WINDOW -->
-  <div class="backdrop is-hidden" data-modal>
-    <div class="modal">
-      <button class="modal-btn" type="button" data-modal-close>
-        <svg class="modal-icon" width="8" height="8">
-          <use href="./images/icons.svg#icon-close"></use>
-        </svg>
-      </button>
+  <div class="modal-backdrop is-hidden" data-modal>
+    <div class="modal-container">
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+      </div>
     </div>
+
   </div>
 
   <script src="./js/header.js"></script>
-  <script src="./js/modal.js."></script>
+
+  <script src="./js/modal.js"></script>
 
 </body>
 
