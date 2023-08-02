@@ -703,9 +703,8 @@ body {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transition: opacity var(--transition-duration)
-      var(--transition-timing-function),
-    visibility var(--transition-duration) var(--transition-timing-function);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-backdrop.is-hidden {
@@ -717,18 +716,12 @@ body {
 
 .modal-container {
   position: absolute;
-  top: 50%;
-  left: 0;
   right: 0;
   bottom: 0;
   display: flex;
   transform: translateY(10px) translateX(-30%);
   align-items: center;
   justify-content: center;
-}
-
-.modal-container .modal {
-  position: relative;
   top: 50%;
   left: 50%;
   width: 408px;
@@ -743,8 +736,7 @@ body {
   transition-delay: 400ms;
   transform: translate(-50%, -50%) scale(1);
   min-height: 584px;
-  transition: transform var(--transition-duration)
-    var(--transition-timing-function);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-backdrop.is-hidden.modal {
@@ -753,7 +745,7 @@ body {
   transition-delay: 0s;
 }
 
-.modal .modal-btn {
+.modal-btn {
   background-color: var(--modal-overlay-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
@@ -769,29 +761,28 @@ body {
   position: absolute;
   cursor: pointer;
   outline: none;
-  transition: background-color var(--transition-duration)
-      var(--transition-timing-function),
-    border var(--transition-duration) var(--transition-timing-function);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal .modal-btn:hover,
-.modal .modal-btn:focus {
+.modal-btn:hover,
+.modal-btn:focus {
   background: var(--pressed-state-color);
   border: none;
 }
 
-.modal .modal-icon {
+.modal-icon {
   width: 8px;
   height: 8px;
-  transition: fill var(--transition-duration) var(--transition-timing-function);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal .modal-btn:hover .modal-icon,
-.modal .modal-btn:focus .modal-icon {
+.modal-btn:hover .modal-icon,
+.modal-btn:focus .modal-icon {
   fill: var(--hero-text);
 }
 
-.modal .modal-icon label {
+.modal-icon label {
   display: block;
 }
 
