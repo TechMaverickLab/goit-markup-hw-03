@@ -396,6 +396,7 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
 .social-cell {
   width: 40px;
   height: 40px;
+  gap: 24px;
 }
 
 .social-title,
@@ -442,17 +443,19 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/Hero/people-office\ 1.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: var(--dark-color);
 }
 
+.hero {
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/Hero/people-office\ 1.jpeg);
+}
 .hero-headline {
   margin-left: auto;
   margin-right: auto;
@@ -575,7 +578,7 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: var(--gap-column);
+  gap: var(--gap-column);
 }
 
 .customer-link {
