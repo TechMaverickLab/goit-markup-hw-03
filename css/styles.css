@@ -393,6 +393,10 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
   gap: 24px;
 }
 
+.page-footer.social-list {
+  gap: 16px;
+}
+
 .social-cell {
   width: 40px;
   height: 40px;
@@ -450,16 +454,9 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/img-name.jpeg);
+    url(../images/Hero/people-office.jpeg);
 }
 
-.hero {
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/Hero/people-office\ 1.jpeg);
-}
 .hero-headline {
   margin-left: auto;
   margin-right: auto;
