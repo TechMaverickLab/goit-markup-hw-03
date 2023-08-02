@@ -283,7 +283,7 @@ body {
 .nav-link.current::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   right: 0;
   display: block;
   width: 100%;
@@ -387,7 +387,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .social-cell {
