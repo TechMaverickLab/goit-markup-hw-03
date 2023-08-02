@@ -27,7 +27,7 @@ img {
   font-style: normal;
 }
 
-.link-ikon {
+.link-icon {
   text-decoration: none;
   outline: none;
 }
@@ -263,11 +263,11 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
   align-items: center;
 }
 
-.link-ikon {
+.link-icon {
   display: block;
 }
 
-.link-ikon,
+.link-icon,
 .button,
 .subscribe-button,
 .modal-form-button {
@@ -276,8 +276,8 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
   transition-timing-function: var(--transition-timing-function);
 }
 
-.nav .link-ikon,
-.address .link-ikon {
+.nav .link-icon,
+.address .link-icon {
   padding-top: 24px;
   padding-bottom: 28px;
   position: relative;
@@ -608,7 +608,7 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
   color: var(--pressed-state-color);
 }
 
-.customer-link.link-ikon {
+.customer-link.link-icon {
   transition: border-color var(--transition-duration)
       var(--transition-timing-function),
     color var(--transition-duration) var(--transition-timing-function);
@@ -743,17 +743,10 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
   overflow: auto;
   padding: 32px;
   margin-top: -28px;
-
   transform: translate(-50%, -50%) scale(1);
   min-height: 584px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-backdrop.is-hidden.modal {
-  transform: translate(-50%, -70%);
-  opacity: 0;
-  transition-delay: 0s;
-}
+  
 
 .modal-btn {
   background-color: var(--modal-overlay-color);
