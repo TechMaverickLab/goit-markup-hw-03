@@ -262,7 +262,6 @@ body {
 
 .link,
 .button,
-.modal-btn,
 .subscribe-button,
 .modal-form-button {
   transition-property: background-color, color, border, fill;
@@ -719,7 +718,7 @@ body {
   right: 0;
   bottom: 0;
   display: flex;
-  transform: translateY(10px) translateX(-30%);
+
   align-items: center;
   justify-content: center;
   top: 50%;
@@ -732,8 +731,7 @@ body {
   overflow: auto;
   padding: 32px;
   margin-top: -28px;
-  transition: transform 150ms, opacity 150ms;
-  transition-delay: 400ms;
+
   transform: translate(-50%, -50%) scale(1);
   min-height: 584px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
