@@ -120,8 +120,6 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
 .address-item:hover,
 .address-item:focus {
   color: var(--pressed-state-color);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .nav,
@@ -685,7 +683,8 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
   border-top: none;
 }
 
-.portfolio-list:hover .portfolio-list:focus {
+.finger-item:hover,
+.finger-item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
