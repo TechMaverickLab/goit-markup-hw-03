@@ -988,6 +988,9 @@ body[data-page='portfolio'] .address-list li:nth-child(2) .address-item {
   overflow: hidden;
 }
 
+.product-text {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .product-overlay {
   position: absolute;
   top: 0;
